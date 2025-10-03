@@ -1,0 +1,185 @@
+/* Importar tipografía Manjari */
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&display=swap');
+
+/* Fondo global de la app */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  background-color: #090928 !important; /* 👈 tu color personalizado */
+  color: white; /* texto en blanco por defecto */
+  font-family: 'Manjari', sans-serif; /* 👈 ahora todo usa Manjari */
+}
+
+* {
+  font-family: 'Manjari', sans-serif !important; /* 👈 fuerza Manjari en todo */
+}
+
+.principal-container,
+.home-container {
+  background-color: transparent; /* deja ver el fondo del body */
+}
+
+body {
+  display: flex;
+  justify-content: center; /* centra el contenido */
+  background-color: #f9fafb; /* opcional: gris clarito de fondo */
+}
+
+/* Contenedor principal centrado */
+.principal-container {
+  margin: 0 auto; /* centra el bloque */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.home-container {
+  width: 100%;
+  min-height: auto;
+  padding-bottom: 10%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: transparent;
+}
+
+/* --- Botón hamburguesa --- */
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  padding: 0;
+  margin: 1rem;
+  z-index: 1100;
+}
+
+.menu-bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* --- Header de bienvenida --- */
+.welcome {
+  background-color: #0a0a2a;
+  color: white;
+  padding: 1.5rem 1rem 1rem 1rem;
+  border-radius: 10px;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcome-row-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.welcome-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.divisor-amarillo {
+  border: 1px solid #fbbf24;
+  margin: 1rem 0;
+}
+
+/* --- Sección de eventos --- */
+.eventos-section {
+  margin: 0px 4px 0px 4px;
+  margin-bottom: 1.5rem;
+}
+
+.eventos-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.evento-card {
+  background-color: #afd1f0;
+  color: #000;
+  min-width: 220px;
+  max-width: 250px;
+  flex: 0 0 auto;
+  padding: 1rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Sección de tareas --- */
+.tareas-section {
+  margin: 0px 4px 0px 4px;
+  height: 80vh;
+}
+
+.tareas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.tarea-card {
+  height: auto;
+  background-color: #afd1f0;
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarea-activa {
+  background-color: #de9205;
+  color: white;
+}
+
+/* --- Responsive layout general --- */
+@media (min-width: 768px) {
+  .principal-container {
+    /* flex-direction: row; */
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-logo {
+    width: 44px;
+    height: 44px;
+  }
+  .welcome {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+}

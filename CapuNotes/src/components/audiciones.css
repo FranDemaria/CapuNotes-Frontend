@@ -1,0 +1,189 @@
+.audiciones-container {
+  background-color: #0b0b3a;
+  min-height: 100vh;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-family: 'Manjari', sans-serif;
+  position: relative;
+}
+
+.header-icon {
+  width: 48px;
+  height: 48px;
+  background-image: url('/public/Logo coro sin fondo.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+}
+
+/* Centrar solo el título respecto a toda la pantalla */
+.audiciones-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.audiciones-title {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: 'Manjari', sans-serif;
+  margin-bottom: 0;
+}
+
+.audiciones-subtitle {
+  font-size: 1rem;
+  color: #fff;
+  font-family: 'Manjari', sans-serif;
+  margin-bottom: 0;
+}
+
+.divisor-amarillo {
+  border: none;
+  border-top: 2px solid #fbbf24;
+  margin: 0.5rem 0 1.2rem 0;
+}
+
+.audiciones-select {
+  background-color: #a7bedf;
+  border: none;
+  border-radius: 20px;
+  color: #23233a;
+  font-family: 'Manjari', sans-serif;
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  min-width: 120px;
+}
+
+.audiciones-search {
+  background-color: #23233a;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  font-family: 'Manjari', sans-serif;
+  min-width: 120px;
+}
+
+.tabla-wrapper {
+  background-color: #a7bedf;
+  border-radius: 20px;
+  padding: 1rem;
+  font-family: 'Manjari', sans-serif;
+}
+
+.tabla-audiciones {
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: 'Manjari', sans-serif;
+}
+
+.tabla-audiciones th {
+  background-color: #243c5a;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  border: none;
+  font-family: 'Manjari', sans-serif;
+}
+
+.tabla-audiciones td {
+  background-color: #a7bedf;
+  color: #23233a;
+  vertical-align: middle;
+  border: none;
+  font-family: 'Manjari', sans-serif;
+}
+
+.audiciones-rta {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.rta-ok {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.rta-no {
+  color: #f87171;
+  font-weight: bold;
+}
+
+.btn-agregar-audicion {
+  background-color: #243c5a;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: background 0.2s;
+  font-family: 'Manjari', sans-serif;
+}
+
+.btn-agregar-audicion:hover {
+  background-color: #fbbf24;
+  color: #23233a;
+}
+
+/* Botón cerrar */
+.menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.menu-close:hover {
+  color: #fbbf24;
+}
+
+@media (max-width: 768px) {
+  .audiciones-container {
+    padding: 1rem 0.2rem;
+  }
+
+  .header-icon {
+    left: 1rem;
+    top: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .audiciones-title {
+    font-size: 1.5rem;
+  }
+
+  .tabla-wrapper {
+    padding: 0.5rem;
+  }
+
+  .audiciones-select,
+  .audiciones-search {
+    font-size: 0.9rem;
+    min-width: 80px;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .btn-agregar-audicion {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
