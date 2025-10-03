@@ -1,0 +1,31 @@
+.landing-footer {
+  background-color: #003366; /* azul oscuro institucional */
+  color: #f0f0f0; /* texto claro */
+  padding: 2rem 1rem;
+  border-top: 4px solid #0055aa; /* línea superior más vibrante */
+  margin-top: 2rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.brand-icon {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.footer-info {
+  text-align: left;
+  color: #e0e0e0;
+}
+
+.footer-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
