@@ -1,36 +1,21 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
-import Navbar from '../components/Navbar'; // Navbar modular
-import ContactoInfo from '../components/ContactoInfo'; // Footer modular
-=======
->>>>>>> main
+import Navbar from '../components/Navbar'; // ✅ Navbar modular
+import Footer from '../components/Footer'; // ✅ Footer modular
 import './quienesSomos.css';
 
 const QuienesSomos = () => {
   const navigate = useNavigate();
 
-<<<<<<< HEAD
-=======
-  const handleLogin = () => {
-    window.scrollTo(0, 0);
-    navigate('/login');
-  };
-
->>>>>>> main
   const handleInscripciones = () => {
     window.scrollTo(0, 0);
     navigate('/inscripciones');
   };
 
   const handleContacto = () => {
-<<<<<<< HEAD
     window.scrollTo(0, 0);
     navigate('/contacto');
-=======
-    console.log('Ir a contacto');
->>>>>>> main
   };
 
   const handleHome = () => {
@@ -40,7 +25,6 @@ const QuienesSomos = () => {
 
   return (
     <div className="quienes-somos-page">
-<<<<<<< HEAD
       {/* Navbar reutilizable */}
       <Navbar
         activePage="quienes"
@@ -48,46 +32,13 @@ const QuienesSomos = () => {
         onInscripciones={handleInscripciones}
         onContacto={handleContacto}
       />
-=======
-      {/* Header */}
-      <nav className="landing-navbar">
-        <Container fluid>
-          <Row className="w-100 align-items-center">
-            <Col xs={6} md={3}>
-              <div className="navbar-brand" onClick={handleHome}>
-                <span className="brand-icon">❄️</span>
-                <span className="brand-text">CapuNotes</span>
-              </div>
-            </Col>
-            <Col xs={6} md={9}>
-              <div className="navbar-menu">
-                <span className="nav-link active">Quienes somos</span>
-                <span className="nav-link" onClick={handleInscripciones}>
-                  Inscripciones
-                </span>
-                <span className="nav-link" onClick={handleContacto}>
-                  Contacto
-                </span>
-                <button className="close-btn" onClick={handleHome}>
-                  ✕
-                </button>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </nav>
->>>>>>> main
 
       {/* Hero Image */}
       <section className="hero-image-section">
         <div className="hero-image-container">
           <img
             src="/Iglesia1.jpg"
-<<<<<<< HEAD
             alt="Fachada de la Iglesia de los Capuchinos en Córdoba"
-=======
-            alt="Iglesia Capuchinos"
->>>>>>> main
             className="hero-image"
           />
         </div>
@@ -99,11 +50,7 @@ const QuienesSomos = () => {
           <Row className="justify-content-center">
             <Col xs={12} lg={10} xl={8}>
               <div className="content-container">
-<<<<<<< HEAD
                 <h2 className="section-title">¿Quiénes somos?</h2>
-=======
-                <h2 className="section-title">Quienes somos</h2>
->>>>>>> main
 
                 <div className="content-text">
                   <p>
@@ -139,47 +86,10 @@ const QuienesSomos = () => {
         </Container>
       </section>
 
-<<<<<<< HEAD
-      {/* Footer con componente ContactoInfo */}
-=======
-      {/* Footer */}
->>>>>>> main
-      <footer className="landing-footer">
-        <Container>
-          <Row>
-            <Col xs={12} md={6}>
-              <div className="footer-brand">
-                <span className="brand-icon">❄️</span>
-                <span className="brand-text">CapuNotes</span>
-              </div>
-            </Col>
-<<<<<<< HEAD
-            <Col xs={12} md={6}>
-              <ContactoInfo />
-=======
-            <Col xs={12} md={3}>
-              <div className="footer-info">
-                <p className="footer-title">Dirección:</p>
-                <p>Buenos Aires 600</p>
-                <p>Córdoba, Argentina</p>
-              </div>
-            </Col>
-            <Col xs={12} md={3}>
-              <div className="footer-info">
-                <p className="footer-title">Teléfono:</p>
-                <p>351000000</p>
-              </div>
->>>>>>> main
-            </Col>
-          </Row>
-        </Container>
-      </footer>
+      {/* ✅ Footer modularizado */}
+      <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default QuienesSomos;
-=======
-export default QuienesSomos;
->>>>>>> main
