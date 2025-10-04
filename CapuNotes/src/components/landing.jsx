@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar'; // ✅ Navbar modular
+import Footer from '../components/Footer'; // ✅ Footer modular
 import './landing.css';
 
 const Landing = () => {
-  console.log('🏠 Landing component rendering...'); // Para debugging
+  console.log('🏠 Landing component rendering...');
   console.log('🏠 Landing component mounted');
 
   const navigate = useNavigate();
@@ -17,14 +19,12 @@ const Landing = () => {
     '/Iglesia4.jpg',
   ];
 
-  // Scroll automático de imágenes
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 4000); // Cambia cada 4 segundos
-
+    }, 4000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -46,32 +46,15 @@ const Landing = () => {
   return (
     <div className="landing-page">
       {console.log('🏠 Landing JSX rendering...')}
-      {/* Header */}
-      <nav className="landing-navbar">
-        <Container fluid>
-          <Row className="w-100 align-items-center">
-            <Col xs={6} md={3}>
-              <div className="navbar-brand">
-                <span className="brand-icon">❄️</span>
-                <span className="brand-text">CapuNotes</span>
-              </div>
-            </Col>
-            <Col xs={6} md={9}>
-              <div className="navbar-menu">
-                <span className="nav-link" onClick={handleQuienesSomos}>
-                  Quienes somos
-                </span>
-                <span className="nav-link" onClick={handleInscripciones}>
-                  Inscripciones
-                </span>
-                <span className="nav-link" onClick={handleLogin}>
-                  Iniciar sesión
-                </span>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </nav>
+
+      {/* ✅ Navbar modular */}
+      <Navbar
+      activePage="landing"
+      onHome={() => navigate('/')}
+      onInscripciones={handleInscripciones}
+      onSesion={handleLogin}
+      onQuienesSomos={handleQuienesSomos} // ✅ nueva prop
+    />
 
       {/* Hero Section con carousel automático */}
       <section className="hero-section">
@@ -110,12 +93,8 @@ const Landing = () => {
       <section className="cards-section">
         <Container>
           <Row className="justify-content-center">
-            {/* Primera card - Ahora con onClick */}
             <Col xs={12} md={4} className="mb-4">
-              <Card
-                className="info-card card-blue"
-                onClick={handleQuienesSomos}
-              >
+              <Card className="info-card card-blue" onClick={handleQuienesSomos}>
                 <Card.Body className="text-center">
                   <div className="card-icon">🏛️</div>
                   <Card.Text className="card-text">
@@ -126,10 +105,7 @@ const Landing = () => {
             </Col>
 
             <Col xs={12} md={4} className="mb-4">
-              <Card
-                className="info-card card-orange"
-                onClick={handleInscripciones}
-              >
+              <Card className="info-card card-orange" onClick={handleInscripciones}>
                 <Card.Body className="text-center">
                   <div className="card-icon">👥</div>
                   <Card.Text className="card-text">
@@ -153,32 +129,8 @@ const Landing = () => {
         </Container>
       </section>
 
-      {/* Footer */}
-      <footer className="landing-footer">
-        <Container>
-          <Row>
-            <Col xs={12} md={6}>
-              <div className="footer-brand">
-                <span className="brand-icon">❄️</span>
-                <span className="brand-text">CapuNotes</span>
-              </div>
-            </Col>
-            <Col xs={12} md={3}>
-              <div className="footer-info">
-                <p className="footer-title">Dirección:</p>
-                <p>Buenos Aires 600</p>
-                <p>Córdoba, Argentina</p>
-              </div>
-            </Col>
-            <Col xs={12} md={3}>
-              <div className="footer-info">
-                <p className="footer-title">Teléfono:</p>
-                <p>351000000</p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </footer>
+      {/* ✅ Footer modular */}
+      <Footer />
     </div>
   );
 };

@@ -376,3 +376,22 @@ textarea.form-control {
 .formulario-card {
   position: relative;
 }
+
+/* En tu archivo formulario.css */
+
+.back-btn {
+    /* Posicionamiento y estilos de botón */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+    /* Estilos para el icono de flecha */
+    font-size: 2em; /* Haz que la flecha sea grande y visible */
+    font-weight: bold; 
+    color: #033c78; /* Color primario de Bootstrap (o el que uses) */
+    padding: 5px;
+    z-index: 10;
+}

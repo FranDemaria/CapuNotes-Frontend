@@ -27,14 +27,12 @@
   align-items: center;
   gap: 1.5rem;
 }
-
 .nav-link {
-  cursor: pointer;
+  color: #333;
+  text-decoration: none;
   font-size: 1rem;
-  color: #555;
   transition: color 0.3s ease;
 }
-
 .nav-link:hover {
   color: #007bff;
 }
@@ -55,5 +53,33 @@
 }
 
 .close-btn:hover {
+  color: #361a98;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #cccccc;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
   color: #333;
+  cursor: pointer;
+  margin-left: auto; /* ✅ Empuja la flecha al extremo derecho */
+  padding: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #007bff;
 }

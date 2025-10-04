@@ -1,8 +1,7 @@
 // components/Footer.jsx
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import ContactoInfo from './ContactoInfo';
-import './Footer.css'; // si tenés estilos específicos
+import './Footer.css'; // estilos específicos
 
 const Footer = () => {
   return (
@@ -16,7 +15,14 @@ const Footer = () => {
             </div>
           </Col>
           <Col xs={12} md={6}>
-            <ContactoInfo />
+            <div className="footer-info">
+              <p className="footer-title">Dirección</p>
+              <p>Buenos Aires 600</p>
+              <p>Córdoba, Argentina</p>
+
+              <p className="footer-title">Teléfono</p>
+              <p>351000000</p>
+            </div>
           </Col>
         </Row>
       </Container>

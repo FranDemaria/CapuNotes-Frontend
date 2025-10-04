@@ -89,9 +89,9 @@ const Formulario = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleHome = () => {
+  const handleBack = () => {
     window.scrollTo(0, 0);
-    navigate('/');
+    navigate(-1);
   };
 
   const handleSubmit = async (e) => {
@@ -148,11 +148,9 @@ const Formulario = () => {
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-8">
             <div className="formulario-card">
-              {/* Botón de cerrar */}
-              <button className="close-btn-formulario" onClick={handleHome}>
-                ✕
-              </button>
-
+              {/* Botón de volver */}
+              <button className="back-btn" onClick={() => handleBack()} aria-label="Volver">←
+              </button> 
               {/* Header */}
               <div className="formulario-header text-center mb-4">
                 <div className="logo-container mb-3">
@@ -166,7 +164,7 @@ const Formulario = () => {
                 <div className="row">
                   <div className="col-12">
                     <div className="form-group mb-3">
-                      <label className="form-label">Nombre y apellido:</label>
+                      <label className="form-label">Nombre y pellido</label>
                       <input
                         type="text"
                         className={`form-control ${
@@ -187,7 +185,7 @@ const Formulario = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group mb-3">
-                      <label className="form-label">Tipo DNI:</label>
+                      <label className="form-label">Tipo Documento</label>
                       <select
                         className={`form-select ${
                           errors.tipoDocumento ? 'is-invalid' : ''
@@ -198,7 +196,7 @@ const Formulario = () => {
                         required
                       >
                         <option value="">Seleccionar</option>
-                        <option value="DNI">DNI</option>
+                        <option value="Documento">Documento</option>
                         <option value="Pasaporte">Pasaporte</option>
                         <option value="Cedula">Cédula</option>
                       </select>
@@ -211,7 +209,7 @@ const Formulario = () => {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group mb-3">
-                      <label className="form-label">Nro dni:</label>
+                      <label className="form-label">Nro Documento</label>
                       <input
                         type="text"
                         className={`form-control ${
@@ -234,7 +232,7 @@ const Formulario = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group mb-3">
-                      <label className="form-label">Fecha de nacimiento:</label>
+                      <label className="form-label">Fecha de Nacimiento</label>
                       <input
                         type="date"
                         className={`form-control ${
@@ -254,7 +252,7 @@ const Formulario = () => {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group mb-3">
-                      <label className="form-label">Correo:</label>
+                      <label className="form-label">Correo</label>
                       <input
                         type="email"
                         className={`form-control ${
@@ -275,7 +273,7 @@ const Formulario = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group mb-3">
-                      <label className="form-label">Teléfono:</label>
+                      <label className="form-label">Teléfono</label>
                       <input
                         type="tel"
                         className="form-control"
@@ -288,7 +286,7 @@ const Formulario = () => {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group mb-3">
-                      <label className="form-label">Provincia:</label>
+                      <label className="form-label">Provincia</label>
                       <select
                         className="form-select"
                         name="provincia"
@@ -310,7 +308,7 @@ const Formulario = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group mb-3">
-                      <label className="form-label">País:</label>
+                      <label className="form-label">País</label>
                       <select
                         className="form-select"
                         name="pais"
@@ -329,7 +327,7 @@ const Formulario = () => {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group mb-3">
-                      <label className="form-label">Profesión:</label>
+                      <label className="form-label">Profesión</label>
                       <select
                         className="form-select"
                         name="profesion"
@@ -351,7 +349,7 @@ const Formulario = () => {
                 <div className="preguntas-section mt-4">
                   <div className="form-group mb-4">
                     <label className="form-label">
-                      ¿Queremos conocer más de vos!
+                      ¡Queremos conocer más de vos!
                     </label>
                     <textarea
                       className="form-control"
@@ -365,7 +363,7 @@ const Formulario = () => {
 
                   <div className="form-group mb-4">
                     <label className="form-label">
-                      ¿Cantás o Orministá alguna vez? ¿Dónde?
+                      ¿Cantáste o participaste en un Coro alguna vez? ¿Dónde?
                     </label>
                     <textarea
                       className="form-control"
@@ -378,8 +376,8 @@ const Formulario = () => {
 
                   <div className="form-group mb-4">
                     <label className="form-label">
-                      ¿Vas a Misa? ¿Conocés la liturgia de la Misa? de quienes
-                      crees o estas?
+                      ¿Vas a Misa? ¿Conocés la liturgia de la Misa? ¿De quiénes
+                      crees o estás?
                     </label>
                     <textarea
                       className="form-control"
@@ -392,7 +390,7 @@ const Formulario = () => {
 
                   <div className="form-group mb-4">
                     <label className="form-label">
-                      ¿Te gusta o participás en algún otro grupo de
+                      ¿Formas parte de algún grupo de
                       Evangelización?
                     </label>
                     <textarea
@@ -406,7 +404,7 @@ const Formulario = () => {
 
                   <div className="form-group mb-4">
                     <label className="form-label">
-                      ¿Sabés tocar algún instrumento musical? ¿Cuál?
+                      ¿Sabés tocar un instrumento musical? ¿Cuál?
                     </label>
                     <textarea
                       className="form-control"
@@ -419,7 +417,7 @@ const Formulario = () => {
 
                   <div className="form-group mb-4">
                     <label className="form-label">
-                      ¿Tenés algún otro talento artístico?
+                      ¿Tenés otro talento artístico?
                     </label>
                     <textarea
                       className="form-control"
@@ -432,7 +430,7 @@ const Formulario = () => {
 
                   <div className="form-group mb-4">
                     <label className="form-label">
-                      ¿Cómo te enteraste de la convocatoria del coro?
+                      ¿Cómo te enteraste de la convocatoria del Coro?
                     </label>
                     <textarea
                       className="form-control"
@@ -472,12 +470,12 @@ const Formulario = () => {
                   {/* Selección de día y horario para audición */}
                   <div className="form-group mb-4">
                     <label className="form-label">
-                      Elegí el horario para tu audición:
+                      Elegí el horario para tu audición
                     </label>
                     <div className="row mt-3">
                       <div className="col-md-6">
                         <div className="form-group">
-                          <label className="form-label">Día:</label>
+                          <label className="form-label">Día</label>
                           <select
                             className={`form-select ${
                               errors.dia ? 'is-invalid' : ''
@@ -504,7 +502,7 @@ const Formulario = () => {
                       <div className="col-md-6">
                         <div className="form-group">
                           <label className="form-label">
-                            Horarios disponibles:
+                            Horarios disponibles
                           </label>
                           <select
                             className={`form-select ${
